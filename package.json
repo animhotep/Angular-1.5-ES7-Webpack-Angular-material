@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Angular made with Webpack",
   "scripts": {
-    "build": "rimraf dist && webpack --bail --progress --profile",
+    "build": "rimraf docs && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress --port 4580",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/animhotep/Angular-1.5-ES7-Webpack-Angular-material/issues"
   },
-  "homepage": "https://animhotep.github.io/Angular-1.5-ES7-Webpack-Angular-material/",
+  "homepage": "https://animhotep.github.io/Angular-1.5-ES7-Webpack-Angular-material/animhotep",
   "dependencies": {
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",

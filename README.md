@@ -1,6 +1,6 @@
 # Angular 1.5 + ES7 + Webpack + Angular material
 
-## [DEMO](/https://animhotep.github.io/Angular-1.5-ES7-Webpack-Angular-material/)
+## [DEMO](https://animhotep.github.io/Angular-1.5-ES7-Webpack-Angular-material/)
 
 * Heavily commented webpack configuration with reasonable defaults.
 * ES6, and ES7 support with babel.
