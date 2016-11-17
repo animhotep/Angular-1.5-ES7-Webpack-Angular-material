@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/animhotep/Angular-1.5-ES7-Webpack-Angular-material/issues"
   },
-  "homepage": "http://animhotep-angular.github.io/",
+  "homepage": "https://animhotep.github.io/Angular-1.5-ES7-Webpack-Angular-material/",
   "dependencies": {
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",
