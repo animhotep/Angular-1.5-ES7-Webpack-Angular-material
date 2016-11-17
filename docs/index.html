@@ -1,0 +1,52 @@
+<!doctype html>
+<html ng-app="app" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Test angular + webpack + es6 + material</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+</head>
+
+<body layout="column">
+<md-toolbar layout="row" class="md-toolbar-tools">
+  <md-button class="menu md-icon-button" hide-gt-sm ng-click="app.toggleList()">
+    <md-icon>menu</md-icon>
+  </md-button>
+  <h1>Angular Material</h1>
+</md-toolbar>
+
+<div flex layout="row">
+  <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" ng-click="app.toggleList()">
+    <md-list>
+
+      <md-list-item>
+        <a data-ui-sref="home" class="md-button" data-ui-sref-active="md-warn" href="/">
+          <md-icon>home</md-icon> Home
+        </a>
+      </md-list-item>
+
+      <md-list-item>
+        <a data-ui-sref="about" class="md-button" data-ui-sref-active="md-warn" href="/contacts">
+          <md-icon>info</md-icon> Serial 1
+        </a>
+      </md-list-item>
+
+      <md-list-item>
+        <a data-ui-sref="contacts" class="md-button" data-ui-sref-active="md-warn" href="/about">
+          <md-icon>info</md-icon> Movie 2
+        </a>
+      </md-list-item>
+
+    </md-list>
+  </md-sidenav>
+
+  <md-content flex id="content">
+    <ui-view/>
+  </md-content>
+</div>
+
+<script type="text/javascript" src="/app.2f5f57de59681a81db45.js"></script></body>
+
+</html>
