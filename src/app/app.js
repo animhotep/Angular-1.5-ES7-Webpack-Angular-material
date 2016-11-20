@@ -14,7 +14,10 @@ import '../style/app.scss';
 
 angular.module('app', ['ngMaterial', 'ui.router'])
     .config(function($urlRouterProvider, $locationProvider, $stateProvider) {
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
         $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('home', {
@@ -29,8 +32,7 @@ angular.module('app', ['ngMaterial', 'ui.router'])
             })
             .state('about', {
                 url: '/about',
-                template: '<h1>My about</h1>',
-                controller: 'qwe'
+                template: '<h1>My about</h1>'
             })
     })
     .controller('AppCtrl', AppCtrl)

@@ -6,6 +6,7 @@ var autoprefixer = require('autoprefixer');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 /**
  * Env
@@ -85,7 +86,7 @@ module.exports = function makeWebpackConfig () {
       // Transpile .js files using babel-loader
       // Compiles ES6 and ES7 into ES5 code
       test: /\.js$/,
-      loader: 'babel',
+      loaders: ['babel', 'ng-annotate'],
       exclude: /node_modules/
     }, {
       // CSS LOADER
@@ -183,9 +184,14 @@ module.exports = function makeWebpackConfig () {
       // Dedupe modules in the output
       new webpack.optimize.DedupePlugin(),
 
+      //https://github.com/jeffling/ng-annotate-webpack-plugin
+/*        new ngAnnotatePlugin({
+            add: true
+        }),
+*/
       // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
       // Minify all javascript, switch loaders to minimizing mode
-      new webpack.optimize.UglifyJsPlugin(),
+      //new webpack.optimize.UglifyJsPlugin(),
 
       // Copy assets from the public folder
       // Reference: https://github.com/kevlened/copy-webpack-plugin

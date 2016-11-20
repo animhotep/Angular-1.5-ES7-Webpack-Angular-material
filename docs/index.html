@@ -6,46 +6,47 @@
   <title>Test angular + webpack + es6 + material</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="">
 </head>
 
 <body layout="column" ng-controller="AppCtrl">
-<md-toolbar layout="row" class="md-toolbar-tools">
-  <md-button class="menu md-icon-button" hide-gt-sm ng-click="toggleList()">
-    <md-icon>menu</md-icon>
-  </md-button>
-  <h1>Angular Material</h1>
-</md-toolbar>
+  <md-toolbar layout="row" class="md-toolbar-tools">
+    <md-button class="menu md-icon-button" hide-gt-sm ng-click="toggleList()">
+      <md-icon>menu</md-icon>
+    </md-button>
+    <h1>Angular Material</h1>
+  </md-toolbar>
 
-<div flex layout="row">
-  <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" ng-click="toggleList()">
-    <md-list>
+  <div flex layout="row">
+    <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" ng-click="toggleList()">
+      <md-list>
 
-      <md-list-item>
-        <a data-ui-sref="home" class="md-button" data-ui-sref-active="md-warn">
-          <md-icon>home</md-icon> Home
-        </a>
-      </md-list-item>
+        <md-list-item>
+          <a data-ui-sref="home" class="md-button" data-ui-sref-active="md-warn">
+            <md-icon>home</md-icon> Home
+          </a>
+        </md-list-item>
 
-      <md-list-item>
-        <a data-ui-sref="about" class="md-button" data-ui-sref-active="md-warn">
-          <md-icon>info</md-icon> Serial 1
-        </a>
-      </md-list-item>
+        <md-list-item>
+          <a data-ui-sref="about" class="md-button" data-ui-sref-active="md-warn">
+            <md-icon>info</md-icon> Serial 1
+          </a>
+        </md-list-item>
 
-      <md-list-item>
-        <a ui-sref="movies({ movieName: 'somename' })" class="md-button" data-ui-sref-active="md-warn">
-          <md-icon>info</md-icon> Movie somename
-        </a>
-      </md-list-item>
+        <md-list-item>
+          <a ui-sref="movies({ movieName: 'somename' })" class="md-button" data-ui-sref-active="md-warn">
+            <md-icon>info</md-icon> Movie somename
+          </a>
+        </md-list-item>
 
-    </md-list>
-  </md-sidenav>
+      </md-list>
+    </md-sidenav>
 
-  <md-content flex id="content">
-    <ui-view/>
-  </md-content>
-</div>
+    <md-content flex id="content">
+      <ui-view/>
+    </md-content>
+  </div>
 
-<script type="text/javascript" src="app.12f20a0ae1c369441af9.js"></script></body>
+<script type="text/javascript" src="app.65fe9a663f04341eda4c.js"></script></body>
 
 </html>
