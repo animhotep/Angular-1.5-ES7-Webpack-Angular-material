@@ -35,5 +35,15 @@ angular.module('app', ['ngMaterial', 'ui.router'])
                 template: '<h1>My about</h1>'
             })
     })
+    .directive('mAppLoading', function() {
+        return ({
+            link: link,
+            restrict: "E"
+        });
+
+        function link(scope, element, attributes) {
+            element.remove();
+        }
+    })
     .controller('AppCtrl', AppCtrl)
     .controller('ItemCtrl', ItemCtrl);

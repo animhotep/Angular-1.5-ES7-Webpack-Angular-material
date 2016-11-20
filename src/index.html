@@ -9,7 +9,33 @@
   <base href="">
 </head>
 
-<body layout="column" ng-controller="AppCtrl">
+<body layout="column" ng-controller="AppCtrl" ng-cloak>
+  <m-app-loading>
+    <style type="text/css">
+    m-app-loading {
+      position: fixed;
+      background-color: #333333;
+      bottom: 0px;
+      left: 0px;
+      position: fixed;
+      right: 0px;
+      top: 0px;
+      z-index: 999999;
+      color: #fff;
+      font-family: monospace;
+    }
+    
+    m-app-loading h1 {
+      text-align: center;
+      top: 50%;
+      width: 100%;
+      position: absolute;
+    }
+    </style>
+
+    <h1>App is Loading...</h1>
+  </m-app-loading>
+
   <md-toolbar layout="row" class="md-toolbar-tools">
     <md-button class="menu md-icon-button" hide-gt-sm ng-click="toggleList()">
       <md-icon>menu</md-icon>
