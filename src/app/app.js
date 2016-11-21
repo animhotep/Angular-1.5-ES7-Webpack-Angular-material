@@ -11,8 +11,9 @@ import ItemCtrl from './item/item.ctrl';
 import 'angular-material/angular-material.min.css';
 import '../style/app.scss';
 
+const MODULE_NAME = 'app';
 
-angular.module('app', ['ngMaterial', 'ui.router'])
+export default angular.module(MODULE_NAME, ['ngMaterial', 'ui.router'])
     .config(function($urlRouterProvider, $locationProvider, $stateProvider) {
         $locationProvider.html5Mode({
             enabled: true,
@@ -47,3 +48,4 @@ angular.module('app', ['ngMaterial', 'ui.router'])
     })
     .controller('AppCtrl', AppCtrl)
     .controller('ItemCtrl', ItemCtrl);
+

@@ -1,20 +1,21 @@
 import app from './app';
+import AppCtrl from './common/app.ctrl.js';
 
 describe('app', () => {
+    let makeCtrl;
+    let myScope;
 
-  describe('AppCtrl', () => {
-    let ctrl;
+    beforeEach(inject(() => {
+        myScope = {};
+        makeCtrl = () => {
+            return new AppCtrl({ $scope: myScope });
+        };
+    }));
 
-    beforeEach(() => {
-      angular.mock.module(app);
-
-      angular.mock.inject(($controller) => {
-        ctrl = $controller('AppCtrl', {});
-      });
+    describe('AppCtrl', () => {
+        it('check test property', () => {
+            let ctrl = makeCtrl();
+            expect(ctrl.test).toEqual('jasmine');
+        });
     });
-
-    it('should contain the starter url', () => {
-      expect(ctrl.url).toBe('https://github.com/preboot/angular-webpack');
-    });
-  });
 });
