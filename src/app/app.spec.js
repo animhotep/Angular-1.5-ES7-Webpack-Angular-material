@@ -19,3 +19,16 @@ describe('app', () => {
         });
     });
 });
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.themoviedb.org/3/authentication/token/new?api_key=%3C%3Capi_key%3E%3E",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
