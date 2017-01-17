@@ -5,7 +5,7 @@ import 'angular-ui-router';
 //my app
 import AppCtrl from './common/app.ctrl';
 import HomeCtrl from './home/home.ctrl';
-import ItemCtrl from './item/item.ctrl';
+import {ItemsCtrl, ItemCtrl} from './item/item.ctrl';
 
 //styles
 import 'angular-material/angular-material.min.css';
@@ -26,7 +26,13 @@ export default angular.module(MODULE_NAME, ['ngMaterial', 'ui.router'])
                 template: require('./home/home.html')
             })
             .state('movies', {
-                url: '/movies/{movieName}',
+                url: '/movies/',
+                template: require('./item/items.html'),
+                controller: 'ItemsCtrl',
+                controllerAs: 'movies'
+            })
+            .state('movie', {
+                url: '/movies/{movieId}',
                 template: require('./item/item.html'),
                 controller: 'ItemCtrl',
                 controllerAs: 'movie'
@@ -47,5 +53,6 @@ export default angular.module(MODULE_NAME, ['ngMaterial', 'ui.router'])
         }
     })
     .controller('AppCtrl', AppCtrl)
+    .controller('ItemsCtrl', ItemsCtrl)
     .controller('ItemCtrl', ItemCtrl);
 

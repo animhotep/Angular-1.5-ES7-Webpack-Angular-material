@@ -1,21 +1,15 @@
-<h1>The most popular movies</h1>
+<h1>{{data.title}}</h1>
 
-<md-content layout="row" layout-wrap>
-  <div ng-repeat="m in movie.data" flex-md="100" flex-gt-md="25">
-    <md-card>
-      <md-card-title>
-        <md-card-title-text>
-          <span class="md-headline">{{m.title}}</span>
-          <span class="md-subhead">{{m.overview}}</span>
-        </md-card-title-text>
-        <md-card-title-media>
-          <img ng-src="http://image.tmdb.org/t/p/w185/{{m.poster_path}}" alt="">
-        </md-card-title-media>
-      </md-card-title>
-      <md-card-actions layout="row" layout-align="end center">
-        <md-button>Action 1</md-button>
-        <md-button>Action 2</md-button>
-      </md-card-actions>
-    </md-card>
-  </div>
-</md-content>
+<p>
+<img ng-src="http://image.tmdb.org/t/p/w185/{{data.poster_path}}" alt="">
+{{data.overview}}
+</p>
+<p>
+  homepage: {{data.homepage}}
+</p>
+<p>
+  budget: {{data.budget}}
+</p>
+<p>
+  popularity: {{data.popularity}}
+</p>
