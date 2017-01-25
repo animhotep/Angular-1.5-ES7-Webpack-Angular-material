@@ -35,7 +35,7 @@ go to [http://localhost:4580](http://localhost:4580) in your browser.
 #### 1. Unit Tests
 
 * single run: `npm test`
-* live mode (TDD style): `npm run test-watch`
+* live reload: `npm run test-watch`
 
 # License
 
