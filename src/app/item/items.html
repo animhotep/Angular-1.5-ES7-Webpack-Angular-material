@@ -3,14 +3,15 @@
 <md-content layout="row" layout-wrap>
   <div ng-repeat="m in movies.data" flex-md="100" flex-gt-md="25">
     <md-card>
+      <md-card-title-media>
+        <a ng-href="{{m.id}}"><img ng-src="http://image.tmdb.org/t/p/w185/{{m.poster_path}}" alt=""></a>
+      </md-card-title-media>
       <md-card-title>
         <md-card-title-text>
           <span class="md-headline">{{m.title}}</span>
+          <br>
           <span class="md-subhead">{{m.overview}}</span>
         </md-card-title-text>
-        <md-card-title-media>
-          <img ng-src="http://image.tmdb.org/t/p/w185/{{m.poster_path}}" alt="">
-        </md-card-title-media>
       </md-card-title>
       <md-card-actions layout="row" layout-align="end center">
         <a ng-href="{{m.id}}" md-button>Details</a>
